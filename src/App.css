@@ -1,38 +1,369 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@100&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Public+Sans:ital,wght@0,300;0,700;1,400&display=swap");
+* {
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home header {
+  width: 100vw;
+  height: 9vh;
+  z-index: 3;
+  background-color: white;
+  position: relative;
+  padding: 3vh 7vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home header .hidden {
+  display: none;
+}
+.home header nav {
+  margin-left: 17vw;
+  width: 25vw;
+  justify-content: space-between;
+}
+.home header nav span {
+  position: relative;
+  bottom: 1vh;
+  cursor: pointer;
+  color: grey;
+}
+.home header nav span:hover {
+  opacity: 0.67;
+}
+.home header button {
+  margin-left: 15vw;
+  color: white;
+  padding: 1vw 6vh;
+  border-radius: 2vw;
+  position: relative;
+  bottom: 0.5vh;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  border: none;
+}
+.home header button:hover {
+  opacity: 0.7;
+}
+.home main {
+  width: 100vw;
+  margin-top: 2vh;
+  height: 70vh;
+  background-color: hsl(0deg, 0%, 98%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 7vw;
+}
+.home main div {
+  width: 45vw;
+}
+.home main .left {
+  padding-top: 14vh;
+}
+.home main .left h2 {
+  font-weight: 400;
+  font-size: 35px;
+  font-stretch: extra-expanded;
+  width: 25vw;
+  margin-bottom: 3vh;
+}
+.home main .left p {
+  font-size: medium;
+  color: grey;
+  text-align: left;
+  width: 29vw;
+}
+.home main .left button {
+  margin-top: 5vh;
+  color: white;
+  padding: 1vw 6vh;
+  border-radius: 2vw;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  border: none;
+}
+.home main .left button:hover {
+  opacity: 0.7;
+}
+.home main .right {
+  background-image: url("./Components//images/bg-intro-desktop.svg");
+  background-size: cover;
+  position: relative;
+  width: 55vw;
+  z-index: 1;
+  bottom: 6vh;
+}
+.home main .right img {
+  position: absolute;
+  width: 650px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: -22vh;
+  left: 8vw;
+}
+.home article {
+  padding: 10vh 7vw;
+  background-color: hsl(220deg, 16%, 96%);
+}
+.home article h3 {
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 3vh;
+}
+.home article aside {
+  margin-top: 10vh;
+  display: flex;
+}
+.home article aside div {
+  width: 20vw;
+  margin-right: 1.7vw;
+}
+.home article aside div img {
+  margin-bottom: 2.2vh;
+  margin-left: 1.1vw;
+}
+.home article aside div h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 3vh;
+}
+.home article aside div p {
+  font-size: small;
+  color: grey;
+}
+.home .section {
+  padding: 7vh 7vw;
+  background-color: hsl(0deg, 0%, 98%);
+}
+.home .section h4 {
+  font-weight: 400;
+  font-size: 25px;
+}
+.home .section aside {
+  display: flex;
+  margin-top: 5vh;
+}
+.home .section aside div {
+  width: 20vw;
+  background-color: white;
+  margin-right: 1.5vw;
+}
+.home .section aside div img {
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+  margin-bottom: 3vh;
+}
+.home .section aside div span {
+  font-size: xx-small;
+  font-weight: 500;
+  color: grey;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  margin-bottom: 5vh;
+}
+.home .section aside div h6 {
+  margin-top: 1vh;
+  font-size: 18px;
+  margin-bottom: 2vh;
+  font-weight: 400;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+.home .section aside div p {
+  color: grey;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  font-size: small;
+}
+.home footer {
+  display: flex;
+  padding: 4vh 7vw;
+  background-color: hsl(233deg, 26%, 24%);
+}
+.home footer section {
+  display: inline-block;
+  min-width: 13vw;
+  text-align: center;
+  margin-right: 4vw;
+}
+.home footer section p {
+  margin-top: 2vh;
+  cursor: pointer;
+  font-size: small;
+  color: white;
+}
+.home footer section p:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+.home footer .first div {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.home footer .first div .MuiSvgIcon-root {
+  cursor: pointer;
+  color: white;
+}
+.home footer .first .MuiSvgIcon-root:hover {
+  color: hsl(136deg, 65%, 51%);
+}
+.home footer .last {
+  margin-left: 10vw;
+}
+.home footer .last button {
+  margin-bottom: 0.8vh;
+  padding: 1vh 2vw;
+  border: none;
+  border-radius: 2vw;
+  color: white;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  cursor: pointer;
+}
+.home footer .last button:hover {
+  opacity: 0.7;
+}
+.home footer .last p:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 1248px) {
+  .home main .right img {
+    left: 2vw;
   }
 }
+@media screen and (max-width: 500px) {
+  .home {
+    overflow-x: hidden;
+  }
+  .home header {
+    height: 7vh;
+  }
+  .home header .hidden {
+    display: inline-block;
+    float: right;
+  }
+  .home header button {
+    display: none;
+  }
+  .home header nav {
+    top: 10vh;
+    position: absolute;
+    margin-left: 0;
+    text-align: center;
+    width: 85vw;
+    flex-direction: column;
+    padding-bottom: 3vh;
+    background-color: white;
+  }
+  .home header nav span {
+    margin-top: 3vh;
+    font-size: larger;
+  }
+  .home main {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .home main .right {
+    width: 100vw;
+    margin-top: 5vh;
+    min-height: 50vh;
+    top: 8vh;
+    background-image: url("./Components/images/bg-intro-mobile.svg");
+    z-index: 2;
+    bottom: 0;
+  }
+  .home main .right img {
+    top: 4vh;
+    left: 8vw;
+    width: 75vw;
+  }
+  .home main div {
+    width: 100vw;
+  }
+  .home main .left {
+    z-index: 1;
+    margin-top: 3vh;
+    position: relative;
+    top: 4vh;
+    padding: 6vh 8vw;
+  }
+  .home main .left h2 {
+    font-size: 40px;
+    margin-left: 4vw;
+    width: inherit;
+  }
+  .home main .left p {
+    width: 80vw;
+  }
+  .home main .left button {
+    transform: translateX(18vw);
+    height: 4.5vh;
+    border-radius: 5vw;
+  }
+  .home article {
+    text-align: center;
+  }
+  .home article h3 {
+    font-size: 30px;
+    margin-left: 5vw;
+    width: 70vw;
+  }
+  .home article aside {
+    flex-direction: column;
+    margin-top: 4vh;
+    padding: 0;
+  }
+  .home article aside div {
+    margin-top: 4vh;
+    width: 80vw;
+  }
+  .home .section {
+    text-align: center;
+  }
+  .home .section aside {
+    flex-direction: column;
+    text-align: left;
+  }
+  .home .section aside div {
+    width: 80vw;
+    margin-bottom: 3vh;
+    margin-left: 3.5vw;
+    padding-bottom: 1.9vh;
+  }
+  .home .section aside div h6 {
+    font-weight: 500;
+  }
+  .home footer {
+    text-align: center;
+    padding: 0 0 4vh 0;
+    flex-direction: column;
+  }
+  .home footer .first {
+    margin-top: 4vh;
+  }
+  .home footer .first img {
+    margin-bottom: 2vh;
+  }
+  .home footer .first div {
+    transform: translateY(3vh);
+    width: 50vw;
+    margin: auto;
+  }
+  .home footer .second {
+    margin-top: 5vh;
+  }
+  .home footer .last button {
+    margin-top: 2vh;
+    margin-right: 8vw;
+    height: 5vh;
+    border-radius: 5vw;
+    padding: 2vh 5vw;
+  }
+}/*# sourceMappingURL=App.css.map */
