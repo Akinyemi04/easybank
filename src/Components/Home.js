@@ -26,7 +26,7 @@ const Home = () => {
         else{
 
         }
-    },[display])
+    },[display,width])
     function change (){
         if(display ==='none'){
             setDisplay('flex')
